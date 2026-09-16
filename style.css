@@ -1,3 +1,8 @@
+:root {
+    --display-height: 600px;
+    --display-width: 600px;
+}
+
 body {
     background-color: pink;
     display: flex;
@@ -20,14 +25,27 @@ body {
 }
 
 .display {
-    width: 600px;
-    height: 600px;
+    width: 632px;
+    height: 632px;
     background-color: aliceblue;
-    border: 3px solid grey;
+    /* border: 3px solid grey; */
     border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    /* column-count: 16;
+    /* column-fill: auto; */
 }
 
-.btn-container {
+/* Create all this css sectionn using javascript. including the :root part*/
+.square {
+    flex: 1, 1, 0;
+    width: calc(var(--display-width) / 16);
+    height: calc(var(--display-height) / 16);
+    border: 1px solid #899599;
+    background-color: aqua;
+}
+
+.controls{
     width: 600px;
     height: 150px;
     margin: 10px;
